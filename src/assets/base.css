@@ -7,6 +7,7 @@
   --color-very-dark-navy: #0B0D17;
   --color-light-blue: #D0D6F9;
   --color-white: #FFFFFF;
+  --color-grey: #979797;
 
 
   --subheading-L-font-size: 28px;
@@ -120,7 +121,8 @@ body {
   letter-spacing: var(--mobile-body-letter-spacing);
 }
 
-nav {
+li {
+  color: var(--color-light-blue);
   font-family: 'Barlow';
   font-size: var(--mobile-nav-text-font-size);
   line-height: var(--mobile-nav-text-line-height);
@@ -175,6 +177,7 @@ h5 {
 }
 
 h6 {
+  color: var(--color-light-blue);
   font-family: 'BarlowCondensed';
   font-weight: 400;
   font-size: var(--subheading-S-font-size);
