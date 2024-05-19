@@ -13,9 +13,14 @@
             <h6>Est. travel time</h6>
             <h5>3 days</h5>
         </div>
+        <div class="background" />
     </div>
 </template>
 
 <style>
+.background {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+}
+
 @media (min-width: 1024px) {}
 </style>
