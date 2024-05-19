@@ -121,6 +121,15 @@ body {
   letter-spacing: var(--mobile-body-letter-spacing);
 }
 
+nav {
+  color: var(--color-light-blue);
+  font-family: 'Barlow';
+  font-size: var(--mobile-nav-text-font-size);
+  line-height: var(--mobile-nav-text-line-height);
+  letter-spacing: var(--mobile-nav-text-letter-spacing);
+  text-transform: uppercase;
+}
+
 li {
   color: var(--color-light-blue);
   font-family: 'Barlow';
