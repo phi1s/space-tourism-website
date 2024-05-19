@@ -1,8 +1,8 @@
 <template>
     <div class="crew">
-        <h3>MEET YOUR CREW</h3>
-        <h2>COMMANDER</h2>
-        <h1>Douglas Hurley</h1>
+        <h4><b>02</b> MEET YOUR CREW</h4>
+        <h3>COMMANDER</h3>
+        <h2>Douglas Hurley</h2>
         <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He
             launched into space for the third time as commander of Crew Dragon Demo-2.</p>
     </div>

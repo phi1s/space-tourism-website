@@ -8,25 +8,6 @@
   --color-light-blue: #D0D6F9;
   --color-white: #FFFFFF;
 
-  /* Headings */
-
-  --heading-L-font-size: 100px;
-  --heading-L-line-height: normal;
-  --heading-L-letter-spacing: 0px;
-
-  --heading-M-font-size: 56px;
-  --heading-M-line-height: normal;
-  --heading-M-letter-spacing: 0px;
-
-  --heading-S-font-size: 28px;
-  --heading-S-line-height: normal;
-  --heading-S-letter-spacing: 0px;
-
-  --heading-XS-font-size: 28px;
-  --heading-XS-line-height: normal;
-  --heading-XS-letter-spacing: 4px;
-
-  /* Subheadings */
 
   --subheading-L-font-size: 28px;
   --subheading-L-line-height: normal;
@@ -36,66 +17,175 @@
   --subheading-S-line-height: normal;
   --subheading-S-letter-spacing: 2px;
 
-  /* Other */
+  /* Desktop */
 
-  --nav-text-font-size: 16px;
-  --nav-text-line-height: normal;
-  --nav-text-letter-spacing: 2px;
+  --desktop-heading-XL-font-size: 144px;
+  --desktop-heading-XL-line-height: normal;
+  --desktop-heading-XL-letter-spacing: 0px;
 
-  --body-font-size: 18px;
-  --body-line-height: 180%;
-  --body-letter-spacing: 0px;
+  --desktop-heading-L-font-size: 100px;
+  --desktop-heading-L-line-height: normal;
+  --desktop-heading-L-letter-spacing: 0px;
+
+  --desktop-heading-M-font-size: 56px;
+  --desktop-heading-M-line-height: normal;
+  --desktop-heading-M-letter-spacing: 0px;
+
+  --desktop-heading-S-font-size: 28px;
+  --desktop-heading-S-line-height: normal;
+  --desktop-heading-S-letter-spacing: 0px;
+
+  --desktop-heading-XS-font-size: 28px;
+  --desktop-heading-XS-line-height: normal;
+  --desktop-heading-XS-letter-spacing: 4px;
+
+  --desktop-nav-text-font-size: 16px;
+  --desktop-nav-text-line-height: normal;
+  --desktop-nav-text-letter-spacing: 2px;
+
+  --desktop-body-font-size: 18px;
+  --desktop-body-line-height: 180%;
+  --desktop-body-letter-spacing: 0px;
+
+  /* Tablet */
+
+  --tablet-heading-XL-font-size: 144px;
+  --tablet-heading-XL-line-height: normal;
+  --tablet-heading-XL-letter-spacing: 0px;
+
+  --tablet-heading-L-font-size: 100px;
+  --tablet-heading-L-line-height: normal;
+  --tablet-heading-L-letter-spacing: 0px;
+
+  --tablet-heading-M-font-size: 56px;
+  --tablet-heading-M-line-height: normal;
+  --tablet-heading-M-letter-spacing: 0px;
+
+  --tablet-heading-S-font-size: 28px;
+  --tablet-heading-S-line-height: normal;
+  --tablet-heading-S-letter-spacing: 0px;
+
+  --tablet-heading-XS-font-size: 28px;
+  --tablet-heading-XS-line-height: normal;
+  --tablet-heading-XS-letter-spacing: 4px;
+
+  --tablet-nav-text-font-size: 16px;
+  --tablet-nav-text-line-height: normal;
+  --tablet-nav-text-letter-spacing: 2px;
+
+  --tablet-body-font-size: 18px;
+  --tablet-body-line-height: 180%;
+  --tablet-body-letter-spacing: 0px;
+
+  /* Mobile */
+
+  --mobile-heading-XL-font-size: 80px;
+  --mobile-heading-XL-line-height: normal;
+  --mobile-heading-XL-letter-spacing: 0px;
+
+  --mobile-heading-L-font-size: 56px;
+  --mobile-heading-L-line-height: normal;
+  --mobile-heading-L-letter-spacing: 0px;
+
+  --mobile-heading-M-font-size: 24px;
+  --mobile-heading-M-line-height: normal;
+  --mobile-heading-M-letter-spacing: 0px;
+
+  --mobile-heading-S-font-size: 18px;
+  --mobile-heading-S-line-height: normal;
+  --mobile-heading-S-letter-spacing: 0px;
+
+  --mobile-heading-XS-font-size: 16px;
+  --mobile-heading-XS-line-height: normal;
+  --mobile-heading-XS-letter-spacing: 15%;
+
+  --mobile-nav-text-font-size: 14px;
+  --mobile-nav-text-line-height: normal;
+  --mobile-nav-text-letter-spacing: 2px;
+
+  --mobile-body-font-size: 15px;
+  --mobile-body-line-height: 180%;
+  --mobile-body-letter-spacing: 0px;
 
 }
 
 body {
   color: var(--color-very-dark-navy);
   font-family:
-    'Bellefair-Regular'
+    'Barlow'
     sans-serif;
-  font-size: var(--body-font-size);
-  line-height: var(--body-line-height);
-  letter-spacing: var(--body-letter-spacing);
+  font-weight: 400;
+  font-size: var(--mobile-body-font-size);
+  line-height: var(--mobile-body-line-height);
+  letter-spacing: var(--mobile-body-letter-spacing);
 }
 
 nav {
-  font-size: var(--nav-text-font-size);
-  line-height: var(--nav-text-line-height);
-  letter-spacing: var(--nav-text-letter-spacing);
+  font-family: 'Barlow';
+  font-size: var(--mobile-nav-text-font-size);
+  line-height: var(--mobile-nav-text-line-height);
+  letter-spacing: var(--mobile-nav-text-letter-spacing);
   text-transform: uppercase;
 }
 
 h1 {
-  font-size: var(--heading-M-font-size);
-  line-height: var(--heading-M-line-height);
-  letter-spacing: var(--heading-M-letter-spacing);
+  font-family: 'Bellefair';
+  font-weight: 400;
+  font-size: var(--mobile-heading-L-font-size);
+  line-height: var(--mobile-heading-L-line-height);
+  letter-spacing: var(--mobile-heading-L-letter-spacing);
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: var(--heading-S-font-size);
-  line-height: var(--heading-S-line-height);
-  letter-spacing: var(--heading-S-letter-spacing);
+  font-family: 'Bellefair';
+  font-weight: 400;
+  font-size: var(--mobile-heading-M-font-size);
+  line-height: var(--mobile-heading-M-line-height);
+  letter-spacing: var(--mobile-heading-M-letter-spacing);
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: var(--heading-XS-font-size);
-  line-height: var(--heading-XS-line-height);
-  letter-spacing: var(--heading-XS-letter-spacing);
+  font-family: 'Bellefair';
+  font-weight: 400;
+  font-size: var(--mobile-heading-S-font-size);
+  line-height: var(--mobile-heading-S-line-height);
+  letter-spacing: var(--mobile-heading-S-letter-spacing);
   text-transform: uppercase;
 }
 
 h4 {
+  font-family: 'BarlowCondensed';
+  font-weight: 400;
+  font-size: var(--mobile-heading-XS-font-size);
+  line-height: var(--mobile-heading-XS-line-height);
+  letter-spacing: var(--mobile-heading-XS-letter-spacing);
+  text-transform: uppercase;
+}
+
+h5 {
+  font-family: 'Bellefair';
+  font-weight: 400;
   font-size: var(--subheading-L-font-size);
   line-height: var(--subheading-L-line-height);
   letter-spacing: var(--subheading-L-letter-spacing);
   text-transform: uppercase;
 }
 
-h5 {
+h6 {
+  font-family: 'BarlowCondensed';
+  font-weight: 400;
   font-size: var(--subheading-S-font-size);
   line-height: var(--subheading-S-line-height);
   letter-spacing: var(--subheading-S-letter-spacing);
   text-transform: uppercase;
+}
+
+p {
+  font-family: 'Barlow';
+  font-weight: 400;
+  font-size: var(--mobile-body-font-size);
+  line-height: var(--mobile-body-line-height);
+  letter-spacing: var(--mobile-body-letter-spacing);
 }
