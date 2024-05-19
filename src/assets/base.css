@@ -149,6 +149,7 @@ h2 {
 }
 
 h3 {
+  opacity: 50%;
   font-family: 'Bellefair';
   font-weight: 400;
   font-size: var(--mobile-heading-S-font-size);
@@ -158,7 +159,7 @@ h3 {
 }
 
 h4 {
-  color: var(--color-light-blue);
+  color: var(--color-white);
   font-family: 'BarlowCondensed';
   font-weight: 400;
   font-size: var(--mobile-heading-XS-font-size);

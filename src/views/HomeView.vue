@@ -20,6 +20,10 @@ const goToDestination = () => { router.push('/destination'); }
 
 
 <style scoped>
+h4 {
+  color: var(--color-light-blue);
+}
+
 button {
   width: 144px;
   height: 144px;

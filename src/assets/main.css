@@ -19,6 +19,11 @@ hr {
   opacity: 0.5;
 }
 
+b {
+  opacity: 50%;
+  margin-right: 16px;
+}
+
 .background {
   position: absolute;
   top: 0;
