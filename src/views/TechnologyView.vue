@@ -1,25 +1,39 @@
+<script setup lang="ts">
+import { technology } from "../data";
+import { ref } from 'vue'
+
+let activeView = ref(0);
+
+const changeActiveView = (view: number) => {
+    activeView.value = view;
+};
+
+const isActive = (view: number) => {
+    return activeView.value === view;
+};
+
+</script>
+
 <template>
     <div class="technology">
         <h4><b>03</b> SPACE LAUNCH 101</h4>
         <div class="image-container">
-            <img src="../assets/technology/image-launch-vehicle-landscape.jpg" />
+            <img :src="technology[activeView].images.portrait" />
         </div>
         <ol>
             <li>
-                <button>1</button>
+                <button :class="{ 'active': isActive(0) }" @click="changeActiveView(0)">1</button>
             </li>
             <li>
-                <button>2</button>
+                <button :class="{ 'active': isActive(1) }" @click="changeActiveView(1)">2</button>
             </li>
             <li>
-                <button>3</button>
+                <button :class="{ 'active': isActive(2) }" @click="changeActiveView(2)">3</button>
             </li>
         </ol>
         <h3>THE TERMINOLOGY…</h3>
-        <h2>LAUNCH VEHICLE</h2>
-        <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface
-            to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation.
-            Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
+        <h2>{{ technology[activeView].name }}</h2>
+        <p>{{ technology[activeView].description }}</p>
         <div class="background" />
     </div>
 </template>
@@ -49,7 +63,6 @@ h4 {
 
 ol {
     width: 150px;
-    opacity: 50%;
     margin-top: 400px;
 }
 
@@ -64,6 +77,13 @@ button {
     border: 1px solid var(--color-white);
     background: transparent;
     border-radius: 100%;
+    opacity: 50%;
+}
+
+.active {
+    color: var(--color-dark-navy);
+    background-color: var(--color-white);
+    opacity: 100%;
 }
 
 @media (min-width: 1024px) {}
