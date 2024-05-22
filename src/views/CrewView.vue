@@ -1,25 +1,40 @@
+<script setup lang="ts">
+import { crew } from "../data";
+import { ref } from 'vue'
+
+let activeView = ref(0);
+
+const changeActiveView = (view: number) => {
+    activeView.value = view;
+};
+
+const isActive = (view: number) => {
+    return activeView.value === view;
+};
+
+</script>
+
 <template>
     <div class="crew">
         <h4><b>02</b> MEET YOUR CREW</h4>
-        <h3>COMMANDER</h3>
-        <h2>Douglas Hurley</h2>
-        <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He
-            launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+        <h3>{{ crew[activeView].role }}</h3>
+        <h2>{{ crew[activeView].name }}</h2>
+        <p>{{ crew[activeView].bio }}</p>
         <ol>
             <li>
-                <div class="dot" />
+                <div class="dot" :class="{ 'active': isActive(0) }" @click="changeActiveView(0)" />
             </li>
             <li>
-                <div class="dot" />
+                <div class="dot" :class="{ 'active': isActive(1) }" @click="changeActiveView(1)" />
             </li>
             <li>
-                <div class="dot" />
+                <div class="dot" :class="{ 'active': isActive(2) }" @click="changeActiveView(2)" />
             </li>
             <li>
-                <div class="dot" />
+                <div class="dot" :class="{ 'active': isActive(3) }" @click="changeActiveView(3)" />
             </li>
         </ol>
-        <img src="../assets/crew/image-douglas-hurley.png" />
+        <img :src="crew[activeView].images.png" />
         <div class="background" />
     </div>
 </template>
@@ -41,11 +56,12 @@ img {
 
 ol {
     width: 100px;
-    opacity: 50%;
+
 }
 
 li {
     border: none;
+    cursor: pointer;
 }
 
 .dot {
@@ -53,6 +69,12 @@ li {
     height: 10px;
     background-color: var(--color-white);
     border-radius: 100%;
+    opacity: 50%;
+    border: none;
+}
+
+.active {
+    opacity: 100%;
 }
 
 @media (min-width: 1024px) {}
