@@ -46,11 +46,6 @@ const toggleNav = () => {
   background-color: var(--color-very-dark-navy);
 }
 
-button {
-  background-color: transparent;
-  border: none;
-}
-
 #logo {
   height: 40px;
   width: 40px;

@@ -28,9 +28,9 @@ button {
   width: 144px;
   height: 144px;
   margin-top: 144px;
-  border: none;
   border-radius: 100%;
-  cursor: pointer;
+  color: var(  --color-very-dark-navy);
+  background-color: var(--color-white);
   transition: box-shadow 0.3s ease;
 }
 

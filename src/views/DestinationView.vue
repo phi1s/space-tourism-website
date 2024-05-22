@@ -8,18 +8,21 @@ const changeActiveView = (view: number) => {
     activeView.value = view;
 };
 
+const isActive = (view: number) => {
+    return activeView.value === view;
+};
+
 </script>
 
 <template>
     <div class="destination">
-        {{ activeView }}
         <h4><b>01 </b>PICK YOUR DESTINATION</h4>
-        <img src="../assets/destination/image-moon.png" />
+        <img :src="destinations[activeView].images.png" />
         <ol>
-            <li><button @click="changeActiveView(0)">MOON</button></li>
-            <li><button @click="changeActiveView(1)">MARS</button></li>
-            <li><button @click="changeActiveView(2)">EUROPA</button></li>
-            <li><button @click="changeActiveView(3)">TITAN</button></li>
+            <li :class="{'active': isActive(0)}"><button @click="changeActiveView(0)">MOON</button></li>
+            <li :class="{'active': isActive(1)}"><button @click="changeActiveView(1)">MARS</button></li>
+            <li :class="{'active': isActive(2)}"><button @click="changeActiveView(2)">EUROPA</button></li>
+            <li :class="{'active': isActive(3)}"><button @click="changeActiveView(3)">TITAN</button></li>
         </ol>
         <h1>{{ destinations[activeView].name }}</h1>
         <p>{{ destinations[activeView].description }}</p>
@@ -37,6 +40,9 @@ const changeActiveView = (view: number) => {
 </template>
 
 <style>
+h4{
+    margin-bottom: 50px;
+}
 img {
     width: 150px;
     height: 150px;
@@ -52,6 +58,10 @@ ol {
 
 li {
     padding-bottom: 12px;
+    
+}
+
+.active {
     border-bottom: 4px solid white;
 }
 
