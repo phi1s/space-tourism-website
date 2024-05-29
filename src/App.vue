@@ -10,11 +10,11 @@ const toggleNav = () => {
 
 <template>
   <header>
-    <div class="mobile-header">
+    <div class="menu">
       <RouterLink to="/">
         <img id="logo" src="./assets/shared/logo.svg" />
       </RouterLink>
-      <button @click="toggleNav">
+      <button @click="toggleNav" class="hamburger">
         <img id="hamburger" src="./assets/shared/icon-hamburger.svg" />
       </button>
     </div>
@@ -61,14 +61,14 @@ const toggleNav = () => {
 
 #close {
   position: absolute;
-  top: 48px;
-  right: 48px;
+  top: 36px;
+  right: 40px;
   height: 19px;
   width: 19px;
   margin-top: 8px;
 }
 
-.mobile-header {
+.menu {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
@@ -97,5 +97,11 @@ nav {
 .active {
   border: none;
   border-right: 3px solid var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
 }
 </style>
