@@ -23,10 +23,12 @@ const toggleNav = () => {
         <img id="close" src="./assets/shared/icon-close.svg" />
       </button>
       <nav>
-        <RouterLink to="/" class="link" @click="toggleNav"><b>00</b>Home</RouterLink>
-        <RouterLink to="/destination" class="link" @click="toggleNav"><b>01</b>Destination</RouterLink>
-        <RouterLink to="/crew" class="link" @click="toggleNav"><b>02</b>Crew</RouterLink>
-        <RouterLink to="/technology" class="link" @click="toggleNav"><b>03</b>Technology</RouterLink>
+        <RouterLink to="/" class="link" activeClass="active" @click="toggleNav"><b>00</b>Home</RouterLink>
+        <RouterLink to="/destination" class="link" activeClass="active" @click="toggleNav"><b>01</b>Destination
+        </RouterLink>
+        <RouterLink to="/crew" class="link" activeClass="active" @click="toggleNav"><b>02</b>Crew</RouterLink>
+        <RouterLink to="/technology" class="link" activeClass="active" @click="toggleNav"><b>03</b>Technology
+        </RouterLink>
       </nav>
     </div>
   </header>
@@ -37,7 +39,7 @@ const toggleNav = () => {
 
 <style scoped>
 .mobile-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -73,16 +75,27 @@ const toggleNav = () => {
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
-  margin-top: 200px;
-  margin-left: 40px;
-  align-items: flex-start;
+  width: 222px;
+  margin: auto;
+  margin-top: 133px;
+  color: var(--color-white)
 }
 
 .link {
+  display: block;
+  width: 100%;
   margin-bottom: 24px;
+  text-align: start;
   color: inherit;
   text-decoration: none;
+}
+
+.link>b {
+  opacity: 100%;
+}
+
+.active {
+  border: none;
+  border-right: 3px solid var(--color-white);
 }
 </style>

@@ -123,7 +123,7 @@ body {
 
 nav {
   color: var(--color-light-blue);
-  font-family: 'Barlow';
+  font-family: 'BarlowCondensed';
   font-size: var(--mobile-nav-text-font-size);
   line-height: var(--mobile-nav-text-line-height);
   letter-spacing: var(--mobile-nav-text-letter-spacing);
