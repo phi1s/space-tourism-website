@@ -11,12 +11,21 @@ const toggleNav = () => {
 <template>
   <header>
     <div class="menu">
-      <RouterLink to="/">
+      <RouterLink to="/" class="logo">
         <img id="logo" src="./assets/shared/logo.svg" />
       </RouterLink>
+      <hr />
       <button @click="toggleNav" class="hamburger">
         <img id="hamburger" src="./assets/shared/icon-hamburger.svg" />
       </button>
+      <nav class="desktop-nav">
+        <RouterLink to="/" class="link" activeClass="active"><b>00</b>Home</RouterLink>
+        <RouterLink to="/destination" class="link" activeClass="active"><b>01</b>Destination
+        </RouterLink>
+        <RouterLink to="/crew" class="link" activeClass="active"><b>02</b>Crew</RouterLink>
+        <RouterLink to="/technology" class="link" activeClass="active"><b>03</b>Technology
+        </RouterLink>
+      </nav>
     </div>
     <div v-if="isOverlay" class="mobile-nav">
       <button @click="toggleNav">
@@ -81,6 +90,14 @@ nav {
   color: var(--color-white)
 }
 
+hr {
+  display: none;
+  width: 100%;
+  border-top: 0px solid var(--color-grey);
+  margin-right: -10px;
+  ;
+}
+
 .link {
   display: block;
   width: 100%;
@@ -99,9 +116,72 @@ nav {
   border-right: 3px solid var(--color-white);
 }
 
+.desktop-nav {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .hamburger {
     display: none;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 96px;
+    width: 100vw;
+  }
+
+  main {
+    margin-top: 200px;
+  }
+
+  .logo {
+    width: 128px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    z-index: 10;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    margin: 0 24px;
+    width: auto;
+    height: 100%;
+  }
+
+  .active {
+    border: none;
+    border-bottom: 3px solid var(--color-white);
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu {
+    top: 40px;
+  }
+
+  .desktop-nav {
+    width: 736px;
+  }
+
+  hr {
+    display: block;
+    margin-top: 48px;
+    ;
   }
 }
 </style>
