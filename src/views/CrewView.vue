@@ -40,10 +40,6 @@ const isActive = (view: number) => {
 </template>
 
 <style scoped>
-h3 {
-    margin-top: 64px;
-}
-
 .background {
     background-image: url("../assets/crew/background-crew-mobile.jpg");
 }
@@ -62,6 +58,11 @@ ol {
 li {
     border: none;
     cursor: pointer;
+    padding: 6px;
+}
+
+p {
+    height: 164px;
 }
 
 .dot {

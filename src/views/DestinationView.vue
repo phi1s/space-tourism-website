@@ -19,10 +19,10 @@ const isActive = (view: number) => {
         <h4><b>01 </b>PICK YOUR DESTINATION</h4>
         <img :src="destinations[activeView].images.png" />
         <ol>
-            <li :class="{'active': isActive(0)}"><button @click="changeActiveView(0)">MOON</button></li>
-            <li :class="{'active': isActive(1)}"><button @click="changeActiveView(1)">MARS</button></li>
-            <li :class="{'active': isActive(2)}"><button @click="changeActiveView(2)">EUROPA</button></li>
-            <li :class="{'active': isActive(3)}"><button @click="changeActiveView(3)">TITAN</button></li>
+            <li :class="{ 'active': isActive(0) }"><button @click="changeActiveView(0)">MOON</button></li>
+            <li :class="{ 'active': isActive(1) }"><button @click="changeActiveView(1)">MARS</button></li>
+            <li :class="{ 'active': isActive(2) }"><button @click="changeActiveView(2)">EUROPA</button></li>
+            <li :class="{ 'active': isActive(3) }"><button @click="changeActiveView(3)">TITAN</button></li>
         </ol>
         <h1>{{ destinations[activeView].name }}</h1>
         <p>{{ destinations[activeView].description }}</p>
@@ -40,9 +40,10 @@ const isActive = (view: number) => {
 </template>
 
 <style>
-h4{
-    margin-bottom: 50px;
+h4 {
+    margin-bottom: 32px;
 }
+
 img {
     width: 150px;
     height: 150px;
@@ -53,16 +54,21 @@ ol {
     justify-content: space-between;
     width: 250px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 32px;
 }
 
 li {
+    color: var(--color-light-blue);
     padding-bottom: 12px;
-    
+}
+
+button {
+    color: inherit;
 }
 
 .active {
-    border-bottom: 4px solid white;
+    color: var(--color-white);
+    border-bottom: 4px solid var(--color-white);
 }
 
 .background {

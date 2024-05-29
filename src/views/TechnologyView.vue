@@ -74,16 +74,14 @@ button {
     color: var(--color-white);
     height: 40px;
     width: 40px;
-    border: 1px solid var(--color-white);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     background: transparent;
     border-radius: 100%;
-    opacity: 50%;
 }
 
 .active {
-    color: var(--color-dark-navy);
+    color: var(--color-very-dark-navy);
     background-color: var(--color-white);
-    opacity: 100%;
 }
 
 @media (min-width: 1024px) {}

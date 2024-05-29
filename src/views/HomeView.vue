@@ -20,6 +20,11 @@ const goToDestination = () => { router.push('/destination'); }
 
 
 <style scoped>
+h1 {
+  font-size: var(--mobile-heading-XL-font-size);
+  margin-top: 24px;
+}
+
 h4 {
   color: var(--color-light-blue);
 }
@@ -27,15 +32,19 @@ h4 {
 button {
   width: 144px;
   height: 144px;
-  margin-top: 144px;
+  margin-top: 112px;
   border-radius: 100%;
-  color: var(  --color-very-dark-navy);
+  color: var(--color-very-dark-navy);
   background-color: var(--color-white);
   transition: box-shadow 0.3s ease;
 }
 
 button:hover {
   box-shadow: 0 0 0 77px rgba(255, 255, 255, 0.1);
+}
+
+button>h3 {
+  margin-top: 0;
 }
 
 .background {

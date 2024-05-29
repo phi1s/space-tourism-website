@@ -69,7 +69,7 @@ const toggleNav = () => {
 .mobile-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 56px;
+  margin-bottom: 24px;
 }
 
 nav {
