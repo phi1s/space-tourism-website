@@ -76,3 +76,10 @@ button {
   background-size: cover;
   z-index: -10;
 }
+
+@media (min-width: 1440px) {
+  #app {
+    max-width: 1100px;
+    text-align: left;
+  }
+}
