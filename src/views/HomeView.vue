@@ -25,6 +25,8 @@ const goToDestination = () => { router.push('/destination'); }
 <style scoped>
 h1 {
   font-size: var(--mobile-heading-XL-font-size);
+  line-height: var(--mobile-heading-XL-line-height);
+  letter-spacing: var(--mobile-heading-XL-letter-spacing);
   margin-top: 24px;
 }
 
@@ -55,6 +57,12 @@ button>h3 {
 }
 
 @media (min-width: 768px) {
+  h1 {
+    font-size: var(--tablet-heading-XL-font-size);
+    line-height: var(--tablet-heading-XL-line-height);
+    letter-spacing: var(--tablet-heading-XL-letter-spacing);
+  }
+
   button {
     width: 272px;
     height: 272px;
@@ -70,6 +78,12 @@ button>h3 {
 }
 
 @media (min-width: 1440px) {
+  h1 {
+    font-size: var(--desktop-heading-XL-font-size);
+    line-height: var(--desktop-heading-XL-line-height);
+    letter-spacing: var(--desktop-heading-XL-letter-spacing);
+  }
+
   .home {
     display: flex;
     justify-content: space-between;
