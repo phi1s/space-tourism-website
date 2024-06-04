@@ -45,10 +45,6 @@ const isActive = (view: number) => {
 </template>
 
 <style scoped>
-.background {
-    background-image: url("../assets/crew/background-crew-mobile.jpg");
-}
-
 img {
     width: 270px;
     height: auto;
@@ -89,9 +85,17 @@ h3 {
     opacity: 100%;
 }
 
+.background {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+}
+
 @media (min-width: 768px) {
     img {
         width: 446px;
+    }
+
+    .background {
+        background-image: url("../assets/crew/background-crew-tablet.jpg");
     }
 }
 
@@ -113,6 +117,10 @@ h3 {
     img {
         width: 100%;
         margin-left: 32px;
+    }
+
+    .background {
+        background-image: url("../assets/crew/background-crew-desktop.jpg");
     }
 }
 </style>

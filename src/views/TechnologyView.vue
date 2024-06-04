@@ -45,10 +45,6 @@ const isActive = (view: number) => {
 </template>
 
 <style scoped>
-.background {
-    background-image: url("../assets/technology/background-technology-mobile.jpg");
-}
-
 img {
     height: 100%;
     width: 100%;
@@ -93,6 +89,10 @@ button {
     background-color: var(--color-white);
 }
 
+.background {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
+}
+
 @media (min-width: 768px) {
     img {
         height: 360px;
@@ -100,6 +100,10 @@ button {
 
     ol {
         margin-top: 476px;
+    }
+
+    .background {
+        background-image: url("../assets/technology/background-technology-tablet.jpg");
     }
 }
 
@@ -130,6 +134,10 @@ button {
         right: 0;
         height: 600px;
         width: 40vw;
+    }
+
+    .background {
+        background-image: url("../assets/technology/background-technology-desktop.jpg");
     }
 }
 </style>

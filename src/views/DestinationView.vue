@@ -95,6 +95,10 @@ button {
         width: 300px;
         height: 300px;
     }
+
+    .background {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }
 }
 
 
@@ -116,6 +120,10 @@ button {
     img {
         width: 480px;
         height: 480px;
+    }
+
+    .background {
+        background-image: url("../assets/destination/background-destination-desktop.jpg");
     }
 }
 </style>

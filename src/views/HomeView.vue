@@ -63,6 +63,10 @@ button>h3 {
   h4 {
     text-align: center;
   }
+
+  .background {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
 }
 
 @media (min-width: 1440px) {
@@ -77,6 +81,10 @@ button>h3 {
 
   h4 {
     text-align: start;
+  }
+
+  .background {
+    background-image: url("../assets/home/background-home-desktop.jpg");
   }
 }
 </style>
