@@ -48,7 +48,7 @@ const isActive = (view: number) => {
     </div>
 </template>
 
-<style>
+<style scoped>
 h4 {
     margin-bottom: 32px;
 }

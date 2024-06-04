@@ -20,20 +20,26 @@ const isActive = (view: number) => {
         <div class="image-container">
             <img :src="technology[activeView].images.portrait" />
         </div>
-        <ol>
-            <li>
-                <button :class="{ 'active': isActive(0) }" @click="changeActiveView(0)">1</button>
-            </li>
-            <li>
-                <button :class="{ 'active': isActive(1) }" @click="changeActiveView(1)">2</button>
-            </li>
-            <li>
-                <button :class="{ 'active': isActive(2) }" @click="changeActiveView(2)">3</button>
-            </li>
-        </ol>
-        <h3>THE TERMINOLOGY…</h3>
-        <h2>{{ technology[activeView].name }}</h2>
-        <p>{{ technology[activeView].description }}</p>
+        <div class="container">
+            <div class="item">
+                <ol>
+                    <li>
+                        <button :class="{ 'active': isActive(0) }" @click="changeActiveView(0)">1</button>
+                    </li>
+                    <li>
+                        <button :class="{ 'active': isActive(1) }" @click="changeActiveView(1)">2</button>
+                    </li>
+                    <li>
+                        <button :class="{ 'active': isActive(2) }" @click="changeActiveView(2)">3</button>
+                    </li>
+                </ol>
+            </div>
+            <div class="item">
+                <h3>THE TERMINOLOGY…</h3>
+                <h2>{{ technology[activeView].name }}</h2>
+                <p>{{ technology[activeView].description }}</p>
+            </div>
+        </div>
         <div class="background" />
     </div>
 </template>
@@ -62,12 +68,15 @@ h4 {
 }
 
 ol {
+    display: flex;
     width: 150px;
+    margin: auto;
     margin-top: 400px;
 }
 
 li {
     border: none;
+    margin: 8px;
 }
 
 button {
@@ -84,5 +93,43 @@ button {
     background-color: var(--color-white);
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 768px) {
+    img {
+        height: 360px;
+    }
+
+    ol {
+        margin-top: 476px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item {
+        margin-top: 240px;
+    }
+
+    h3 {
+        margin-top: 8px;
+    }
+
+    ol {
+        display: block;
+        margin-top: 0;
+        width: 80px;
+    }
+
+    .image-container {
+        position: absolute;
+        left: 60%;
+        right: 0;
+        height: 600px;
+        width: 40vw;
+    }
+}
 </style>

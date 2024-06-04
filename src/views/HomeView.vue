@@ -59,6 +59,10 @@ button>h3 {
     width: 272px;
     height: 272px;
   }
+
+  h4 {
+    text-align: center;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -69,6 +73,10 @@ button>h3 {
 
   .text {
     width: 540px;
+  }
+
+  h4 {
+    text-align: start;
   }
 }
 </style>

@@ -16,25 +16,30 @@ const isActive = (view: number) => {
 
 <template>
     <div class="crew">
-        <h4><b>02</b> MEET YOUR CREW</h4>
-        <h3>{{ crew[activeView].role }}</h3>
-        <h2>{{ crew[activeView].name }}</h2>
-        <p>{{ crew[activeView].bio }}</p>
-        <ol>
-            <li>
-                <div class="dot" :class="{ 'active': isActive(0) }" @click="changeActiveView(0)" />
-            </li>
-            <li>
-                <div class="dot" :class="{ 'active': isActive(1) }" @click="changeActiveView(1)" />
-            </li>
-            <li>
-                <div class="dot" :class="{ 'active': isActive(2) }" @click="changeActiveView(2)" />
-            </li>
-            <li>
-                <div class="dot" :class="{ 'active': isActive(3) }" @click="changeActiveView(3)" />
-            </li>
-        </ol>
-        <img :src="crew[activeView].images.png" />
+        <div class="container">
+            <div class="item">
+                <h4><b>02</b> MEET YOUR CREW</h4>
+                <h3>{{ crew[activeView].role }}</h3>
+                <h2>{{ crew[activeView].name }}</h2>
+                <p>{{ crew[activeView].bio }}</p>
+                <ol>
+                    <li>
+                        <div class="dot" :class="{ 'active': isActive(0) }" @click="changeActiveView(0)" />
+                    </li>
+                    <li>
+                        <div class="dot" :class="{ 'active': isActive(1) }" @click="changeActiveView(1)" />
+                    </li>
+                    <li>
+                        <div class="dot" :class="{ 'active': isActive(2) }" @click="changeActiveView(2)" />
+                    </li>
+                    <li>
+                        <div class="dot" :class="{ 'active': isActive(3) }" @click="changeActiveView(3)" />
+                    </li>
+                </ol>
+            </div>
+            <div class="item"> <img :src="crew[activeView].images.png" /></div>
+        </div>
+
         <div class="background" />
     </div>
 </template>
@@ -52,6 +57,8 @@ img {
 
 ol {
     width: 100px;
+    display: flex;
+    margin: auto;
 
 }
 
@@ -63,6 +70,10 @@ li {
 
 p {
     height: 164px;
+}
+
+h3 {
+    margin-top: 200px;
 }
 
 .dot {
@@ -78,5 +89,30 @@ p {
     opacity: 100%;
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 768px) {
+    img {
+        width: 446px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .item {
+        width: 50%;
+    }
+
+    ol {
+        margin-left: 0;
+
+    }
+
+    img {
+        width: 100%;
+        margin-left: 32px;
+    }
+}
 </style>
